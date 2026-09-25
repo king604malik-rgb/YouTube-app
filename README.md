@@ -6,6 +6,6 @@ The window has play/pause and mute buttons, previous/next controls, and **Open i
 
 ## Build and install
 
-Open this folder in Android Studio, let Gradle sync, then choose **Build > Build APK(s)**. Install `app/build/outputs/apk/debug/app-debug.apk` on your S25 Ultra. Open Shorts Window, paste Shorts URLs (one per line), grant overlay access, and tap **Show floating player**.
+On your phone, open the repository's **Actions > Build Android APK > latest successful run**. Under **Artifacts**, download **Shorts-Window-debug-APK**, unzip it, then install `app-debug.apk`. If Android asks, enable installing apps from the file manager you used. Open Shorts Window, paste Shorts URLs (one per line), grant overlay access, and tap **Show floating player**. Drag the header to move it, or drag the lower-right **◢** corner to resize it; the size and position are remembered. You can also open this project in Android Studio and choose **Build > Build APK(s)**.
 
 Requires Android 8.0 or newer and internet. Playback uses the official YouTube IFrame Player. There is no YouTube login or Data API key. A video owner or YouTube can disable embedding, in which case **Open in YouTube** still works. Android shows a notification while the overlay is running.
