@@ -77,13 +77,13 @@ public class OverlayService extends Service {
         int screenH = getResources().getDisplayMetrics().heightPixels;
         minWidth = dp(210); minHeight = dp(310);
         int width = Math.min(screenW - dp(24), Math.max(minWidth, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("width", dp(320))));
-        int height = Math.min(screenH - dp(140), Math.max(minHeight, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("height", dp(430))));
+        int height = Math.min(screenH - dp(140), Math.max(minHeight, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("height", dp(385))));
         params = new WindowManager.LayoutParams(width, height, WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN,
                 android.graphics.PixelFormat.TRANSLUCENT);
         params.gravity = Gravity.TOP | Gravity.LEFT;
         params.x = Math.max(0, Math.min(screenW - width, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("x", dp(24))));
-        params.y = Math.max(0, Math.min(screenH - height, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("y", dp(230))));
+        params.y = Math.max(0, Math.min(screenH - height, getSharedPreferences("shorts_window", MODE_PRIVATE).getInt("y", dp(165))));
 
         overlay = new FrameLayout(this);
         overlay.setBackground(bg(0xff090d13, 20));
